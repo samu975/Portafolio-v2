@@ -17,7 +17,6 @@ import {
   SiAngularjs,
   SiAdobexd,
 } from "react-icons/si";
-import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
@@ -30,28 +29,28 @@ export const aboutData = [
       {
         title: "Front-end Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiAngularjs />,
-          <FaWordpress />,
+          <FaHtml5 key={"fahtml"} />,
+          <FaCss3 key={"facss"} />,
+          <FaJs key={"fajs"} />,
+          <FaReact key={"faReact"} />,
+          <SiNextdotjs key={"sinext"} />,
+          <SiAngularjs key={"siangular"} />,
+          <FaWordpress key={"fawordpress"} />,
         ],
       },
       {
         title: "Back-end Development",
         icons: [
-          <FaNodeJs />,
-          <FaJava />,
-          <FaPython />,
-          <SiRuby />,
-          <SiElixir />,
+          <FaNodeJs key={"fanode"} />,
+          <FaJava key={"fajava"} />,
+          <FaPython key={"fapyth"} />,
+          <SiRuby key={"siRuby"} />,
+          <SiElixir key={"sielixir"} />,
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />],
+        icons: [<FaFigma key={"fafigma"} />, <SiAdobexd key={"SiAdobe"} />],
       },
     ],
   },
@@ -179,6 +178,7 @@ const About = () => {
                 >
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   <div
+                    key={"-" + i}
                     className={`hidden ${i === 0 ? "md:hidden" : "md:flex"}`}
                   >
                     -
