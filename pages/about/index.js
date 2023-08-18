@@ -138,10 +138,13 @@ const About = () => {
             Soy Samuel Rosero, un apasionado desarrollador de software con una
             trayectoria impulsada por la creación de soluciones innovadoras. Con
             un historial probado como líder en proyectos, he colaborado con
-            empresas tanto a nivel nacional como internacional. Mi enfoque no
-            solo se centra en el desarrollo de aplicaciones, sino en la entrega
-            de soluciones que impactan positivamente los objetivos
-            empresariales.
+            empresas tanto a nivel nacional como internacional.{" "}
+            <span className="hidden xl:block">
+              {" "}
+              Mi enfoque no solo se centra en el desarrollo de aplicaciones,
+              sino en la entrega de soluciones que impactan positivamente los
+              objetivos empresariales.
+            </span>
           </p>
         </motion.div>
         <motion.div
