@@ -18,10 +18,10 @@ const Header = () => {
   }
   return (
     <header
-      className={`relative z-10 w-full flex items-center px-16 xl:px-0 xl:h-[90px] bg-gradient-to-r pb-10 xl:pt-24 xl:pb-0 ${
+      className={`relative z-10 w-full flex items-center px-16 xl:px-0 xl:h-[90px] pb-10 xl:pt-24 xl:pb-0 ${
         pathName === "/"
           ? "bg-gradient-to-r from-primary/10 via-black/30 to-black/10"
-          : "bg-site xl:mb-20 xl:pt-0"
+          : "xl:mb-20 xl:pt-0"
       }`}
     >
       <div className="container mx-auto">

@@ -6,19 +6,17 @@ import {
   HiRectangleGroup,
   HiChatBubbleBottomCenterText,
   HiEnvelope,
+  HiWallet,
+  HiBugAnt,
 } from "react-icons/hi2";
+
+import { PiBagSimpleFill } from "react-icons/pi";
 
 // nav data
 export const navData = [
   { name: "Home", path: "/", icon: <HiHome /> },
   { name: "Acerca", path: "/about", icon: <HiUser /> },
-  { name: "Servicios", path: "/services", icon: <HiRectangleGroup /> },
-  { name: "Portafolio", path: "/work", icon: <HiViewColumns /> },
-  {
-    name: "Testimonios",
-    path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />,
-  },
+  { name: "Portafolio", path: "/work", icon: <PiBagSimpleFill /> },
   {
     name: "Contacto",
     path: "/contact",
