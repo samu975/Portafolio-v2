@@ -80,7 +80,8 @@ export const aboutData = [
     info: [
       {
         title:
-          "Tecnólogo en Desarrollo de software - Universidad Digital de Antioquia - 2022",
+          "Tecnólogo en Desarrollo de software - Universidad Digital de Antioquia",
+        stage: "2022",
       },
       {
         title: "Énfasis en React + Next.js - Enyoy",
@@ -117,9 +118,8 @@ const About = () => {
   if (!hydrated) {
     return null;
   }
-  console.log(index);
   return (
-    <div className=" py-1 text-center xl:tex-left bg-gradient-to-r from-primary/10 via-black/30 to-black/10 pb-10 xl:0 overflow-x-hidden">
+    <div className=" py-1 text-center xl:tex-left pb-10 xl:m-t-10 overflow-x-hidden min-h-[100vh]">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -186,10 +186,7 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60 md:text-start"
                 >
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div
-                    key={"-" + i}
-                    className={`hidden ${i === 0 ? "md:hidden" : "md:flex"}`}
-                  >
+                  <div key={"-" + i} className="md:flex hidden">
                     -
                   </div>
                   <div>{item.stage}</div>
