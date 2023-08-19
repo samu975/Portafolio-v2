@@ -39,7 +39,7 @@ const Contact = () => {
   return (
     <div className="h-full">
       <div className="container mx-auto text-center xl:text-left flex items-center justify-center h-full">
-        <div className="flex flex-col w-full max-w-[700px]">
+        <div className="flex flex-col w-full max-w-[700px] pb-40">
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
