@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaHtml5,
   FaCss3,
@@ -108,9 +108,18 @@ export const aboutData = [
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const [hydrated, sethydrated] = useState(true);
+
+  useEffect(() => {
+    sethydrated(true);
+  }, []);
+
+  if (!hydrated) {
+    return null;
+  }
   console.log(index);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:tex-left mb-80">
+    <div className=" py-1 text-center xl:tex-left bg-gradient-to-r from-primary/10 via-black/30 to-black/10 pb-10 xl:0 overflow-x-hidden">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -151,7 +160,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px] overflow-auto mb-20"
+          className="flex flex-col w-full xl:max-w-[48%] xl:h-[480px] mb-20"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, i) => {

@@ -1,5 +1,6 @@
 // fonts settings
 import { Sora } from "@next/font/google";
+import { useState, useEffect } from "react";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -13,9 +14,19 @@ import Header from "../components/Header";
 import TopLeftImage from "../components/TopLeftImg";
 
 const Layout = ({ children }) => {
+  const [hydrated, sethydrated] = useState(true);
+
+  useEffect(() => {
+    sethydrated(true);
+  }, []);
+
+  if (!hydrated) {
+    return null;
+  }
   return (
     <div
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable}`}
+      className={`bg-site text-white bg-cover bg-no-repeat ${sora.variable}`}
+      style={{ minHeight: "100vh" }}
     >
       <Nav />
       <Header />
