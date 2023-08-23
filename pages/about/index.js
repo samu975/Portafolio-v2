@@ -92,6 +92,10 @@ export const aboutData = [
         stage: "2022",
       },
       {
+        title: "Backend con Java y Spring Boot - One by Oracle",
+        stage: "2021",
+      },
+      {
         title: "Curso de NesJS y Graphql - Udemy",
         stage: "2023",
       },
